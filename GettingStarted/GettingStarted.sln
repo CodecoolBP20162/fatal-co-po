@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedLib", "GettingStartedLib\GettingStartedLib.csproj", "{2B863DA4-A9F1-4CA0-B36D-80E947074C71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLib", "GettingStartedLib\WcfLib.csproj", "{2B863DA4-A9F1-4CA0-B36D-80E947074C71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedHost", "GettingStartedHost\GettingStartedHost.csproj", "{F6CBAE14-81AB-4CCB-8B77-2E0A3C8DC1CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfHost", "GettingStartedHost\WcfHost.csproj", "{F6CBAE14-81AB-4CCB-8B77-2E0A3C8DC1CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfClient", "Client\WcfClient.csproj", "{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

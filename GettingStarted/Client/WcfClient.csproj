@@ -70,6 +70,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,13 +104,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GettingStartedHost\GettingStartedHost.csproj">
+    <ProjectReference Include="..\GettingStartedHost\WcfHost.csproj">
       <Project>{f6cbae14-81ab-4ccb-8b77-2e0a3c8dc1ca}</Project>
-      <Name>GettingStartedHost</Name>
+      <Name>WcfHost</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GettingStartedLib\GettingStartedLib.csproj">
+    <ProjectReference Include="..\GettingStartedLib\WcfLib.csproj">
       <Project>{2B863DA4-A9F1-4CA0-B36D-80E947074C71}</Project>
-      <Name>GettingStartedLib</Name>
+      <Name>WcfLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

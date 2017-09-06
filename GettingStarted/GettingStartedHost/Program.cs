@@ -1,19 +1,14 @@
 ﻿using GettingStartedLib;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Discovery;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GettingStartedHost
 {
 
     class Program
     {
-        
         public static void Main(string[] args)
         {
            WcfTestHost_Open();
@@ -23,7 +18,7 @@ namespace GettingStartedHost
         public static void WcfTestHost_Open()
         {
             string hostname = System.Environment.MachineName;
-            var baseAddress = new UriBuilder("http", hostname, 7400, "WcfPing");
+            var baseAddress = new UriBuilder("http", "192.168.161.38", 2000, "WcfPing");
             var h = new ServiceHost(typeof(WcfPingTest), baseAddress.Uri);
 
             // enable processing of discovery messages.  use UdpDiscoveryEndpoint to enable listening. use EndpointDiscoveryBehavior for fine control.

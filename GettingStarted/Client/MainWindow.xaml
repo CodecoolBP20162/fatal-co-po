@@ -35,6 +35,9 @@
                         <MenuItem Header="Remove file"></MenuItem>
                     </MenuItem>
                 </Menu>
+                <TextBlock x:Name="tbSomething" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="117"><Run Text="TextBlock"/><InlineUIContainer>
+                <ListBox Height="100" Width="100"/>
+            </InlineUIContainer></TextBlock>
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="x" Height="32" Width="32" Padding="2,2,2,2"></Button>
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="□" Height="32" Width="32" Padding="2,2,2,2"></Button>
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="_" Height="32" Width="32" Padding="2,2,2,2"></Button>
@@ -58,9 +61,7 @@
             </StackPanel>
         </Border>
         
-        <TextBlock x:Name="tbSomething" HorizontalAlignment="Left" Margin="156,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="143" Width="288"><Run Text="TextBlock"/><InlineUIContainer>
-                <ListBox Height="100" Width="100"/>
-            </InlineUIContainer></TextBlock>
+        
 
     </Grid>
 </Window>

@@ -24,3 +24,28 @@ C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\Client\bin\D
 C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\Client\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\Client\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\Client\obj\Debug\App.baml
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\Client.exe.config
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\Client.exe
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\Client.pdb
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedHost.exe
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedLib.dll
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\MaterialDesignColors.dll
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedHost.pdb
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedHost.exe.config
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedLib.pdb
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\GettingStartedLib.dll.config
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\codes\fatal-co-po\GettingStarted\Client\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\MainWindow.g.cs
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\App.g.cs
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client_MarkupCompile.cache
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client_MarkupCompile.lref
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\App.baml
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\MainWindow.baml
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.g.resources
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.Properties.Resources.resources
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.exe
+C:\codes\fatal-co-po\GettingStarted\Client\obj\Debug\Client.pdb
