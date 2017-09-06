@@ -10,6 +10,6 @@ namespace GettingStartedLib
         string Ping();
 
         [OperationContract]
-        MemoryStream GetScreenshot();
+        Stream GetScreenshot();
     }
 }

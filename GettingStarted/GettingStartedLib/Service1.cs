@@ -9,11 +9,12 @@ namespace GettingStartedLib
 
         public string Ping() { return magicString; }
 
-        public MemoryStream GetScreenshot()
+        public Stream GetScreenshot()
         {
             try
             {
                 MemoryStream ms = ScreenShotMaker.MakeScreenshot();
+                ms.Position = 0;
                 return ms;
             }
             catch (IOException ex)
