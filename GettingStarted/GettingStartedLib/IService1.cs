@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using System.IO;
+using System.ServiceModel;
 
 namespace GettingStartedLib
 {
@@ -7,5 +8,8 @@ namespace GettingStartedLib
     {
         [OperationContract]
         string Ping();
+
+        [OperationContract]
+        MemoryStream GetScreenshot();
     }
 }

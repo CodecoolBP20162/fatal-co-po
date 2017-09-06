@@ -16,10 +16,17 @@ namespace Client
 
         public void Start()
         {
-            ClientConnection client = new ClientConnection();
-            IWcfPingTest channel = client.SetupChannel();
+            ClientConnection client = ClientConnection.GetInstance;
+            client.SetupChannels();
+            IWcfPingTest channel = client.Channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
+        }
+
+        private void screenshotButton_Click(object sender, RoutedEventArgs e)
+        {
+            ClientConnection client = ClientConnection.GetInstance;
+            client.SaveScreenShot(0);
         }
     }
 }
