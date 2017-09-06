@@ -1,8 +1,5 @@
-﻿using System;
-using System.Windows;
-using System.ServiceModel.Discovery;
+﻿using System.Windows;
 using GettingStartedLib;
-using System.ServiceModel;
 
 namespace Client
 {
@@ -16,16 +13,16 @@ namespace Client
 
         public void Start()
         {
-            ClientConnection client = ClientConnection.GetInstance;
+            ClientConnection client = ClientConnection.GetInstance();
             client.SetupChannels();
-            IWcfPingTest channel = client.Channels[0];
+            IWcfPingTest channel = client.channel[0];
             string result = channel.Ping();
             tbSomething.Text = result;
         }
 
         private void screenshotButton_Click(object sender, RoutedEventArgs e)
         {
-            ClientConnection client = ClientConnection.GetInstance;
+            ClientConnection client = ClientConnection.GetInstance();
             client.SaveScreenShot(0);
         }
     }

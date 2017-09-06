@@ -35,6 +35,8 @@ namespace GettingStartedHost
 
             // create endpoint
             var binding = new BasicHttpBinding(BasicHttpSecurityMode.None);
+            binding.MaxReceivedMessageSize = 4294967295;
+            binding.TransferMode = TransferMode.Streamed;
             h.AddServiceEndpoint(typeof(IWcfPingTest), binding, "");
             h.Open();
             Console.WriteLine("host open at " + baseAddress);

@@ -41,6 +41,7 @@
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="x" Height="32" Width="32" Padding="2,2,2,2"></Button>
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="□" Height="32" Width="32" Padding="2,2,2,2"></Button>
                 <Button DockPanel.Dock="Right" VerticalAlignment="top" Content="_" Height="32" Width="32" Padding="2,2,2,2"></Button>
+                <Button Name="screenshotButton" Content="Button" Height="66" VerticalAlignment="Top" Width="75" Click="screenshotButton_Click"/>
             </DockPanel>
         </Border>
 

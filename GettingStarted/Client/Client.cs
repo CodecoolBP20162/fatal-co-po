@@ -10,32 +10,31 @@ namespace Client
     class ClientConnection
     {
         private static ClientConnection instance;
-        public List<IWcfPingTest> Channels { get; set; }
+        public List<IWcfPingTest> channel = new List<IWcfPingTest>();
 
         private ClientConnection() { }
 
-        public static ClientConnection GetInstance
+        public static ClientConnection GetInstance()
         {
-            get
+            if (instance == null)
             {
-                if (instance == null)
-                {
-                    instance = new ClientConnection();
-                }
-                return instance;
+                instance = new ClientConnection();
             }
+            return instance;
         }
 
         public void SetupChannels()
         {
             var binding = new BasicHttpBinding(BasicHttpSecurityMode.None);
+            binding.MaxReceivedMessageSize = 4294967295;
+            binding.TransferMode = TransferMode.Streamed;
             var factory = new ChannelFactory<IWcfPingTest>(binding);
             var uri = DiscoverChannel();
             foreach (var item in uri.Endpoints)
             {
                 EndpointAddress newEndpoint = new EndpointAddress(item.Address.Uri);
                 IWcfPingTest newChannel = factory.CreateChannel(newEndpoint);
-                Channels.Add(newChannel);
+                channel.Add(newChannel);
             }
         }
 
@@ -52,8 +51,8 @@ namespace Client
         {
             try
             {
-                var screenshot = Channels[channelIndex].GetScreenshot();
-                string path = @"C:\testfolder\" + Channels[channelIndex].ToString() + @"\screenshot.jpg";
+                var screenshot = channel[channelIndex].GetScreenshot();
+                string path = @"C:\testfolder\" + channel[channelIndex].ToString() + @"\screenshot.jpg";
                 Console.WriteLine(path);
                 FileStream fileStream = new FileStream(path, FileMode.Create);
                 screenshot.CopyTo(fileStream);
