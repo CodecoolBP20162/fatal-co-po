@@ -15,7 +15,7 @@ namespace Client
         {
             ClientConnection client = ClientConnection.GetInstance();
             client.SetupChannels();
-            IWcfPingTest channel = client.channel[0];
+            IWcfPingTest channel = client.channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
         }

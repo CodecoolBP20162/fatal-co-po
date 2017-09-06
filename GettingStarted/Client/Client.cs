@@ -10,7 +10,7 @@ namespace Client
     class ClientConnection
     {
         private static ClientConnection instance;
-        public List<IWcfPingTest> channel = new List<IWcfPingTest>();
+        public List<IWcfPingTest> channels = new List<IWcfPingTest>();
 
         private ClientConnection() { }
 
@@ -34,7 +34,7 @@ namespace Client
             {
                 EndpointAddress newEndpoint = new EndpointAddress(item.Address.Uri);
                 IWcfPingTest newChannel = factory.CreateChannel(newEndpoint);
-                channel.Add(newChannel);
+                channels.Add(newChannel);
             }
         }
 
@@ -51,8 +51,8 @@ namespace Client
         {
             try
             {
-                var screenshot = channel[channelIndex].GetScreenshot();
-                string path = @"C:\testfolder\" + channel[channelIndex].ToString() + @"\screenshot.jpg";
+                var screenshot = channels[channelIndex].GetScreenshot();
+                string path = @"C:\testfolder\" + channels[channelIndex].ToString() + @"\screenshot.jpg";
                 Console.WriteLine(path);
                 FileStream fileStream = new FileStream(path, FileMode.Create);
                 screenshot.CopyTo(fileStream);

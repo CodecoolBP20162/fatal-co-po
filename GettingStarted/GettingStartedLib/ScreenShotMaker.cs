@@ -12,15 +12,22 @@ namespace GettingStartedLib
     {
         public static MemoryStream MakeScreenshot()
         {
-            Bitmap printscreen = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
+                               Screen.PrimaryScreen.Bounds.Height,
+                               PixelFormat.Format32bppArgb);
+            // Create a graphics object from the bitmap.
+            var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
 
-            Graphics graphics = Graphics.FromImage(printscreen as Image);
+            // Take the screenshot from the upper left corner to the right bottom corner.
+            gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
+                                        Screen.PrimaryScreen.Bounds.Y,
+                                        0,
+                                        0,
+                                        Screen.PrimaryScreen.Bounds.Size,
+                                        CopyPixelOperation.SourceCopy);
 
-            graphics.CopyFromScreen(0, 0, 0, 0, printscreen.Size);
-
-            //printscreen.Save(@"C:\Temp\printscreen.jpg", ImageFormat.Jpeg);
             MemoryStream ms = new MemoryStream();
-            printscreen.Save(ms, ImageFormat.Jpeg);
+            bmpScreenshot.Save(ms, ImageFormat.Png);
             ms.Position = 0;
             return ms;
         }
