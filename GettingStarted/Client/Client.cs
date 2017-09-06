@@ -28,6 +28,11 @@ namespace Client
             var binding = new BasicHttpBinding(BasicHttpSecurityMode.None);
             binding.MaxReceivedMessageSize = 4294967295;
             binding.TransferMode = TransferMode.Streamed;
+            TimeSpan timespan = new TimeSpan(300);
+            binding.CloseTimeout = timespan;
+            binding.OpenTimeout = timespan;
+            binding.ReceiveTimeout = timespan;
+            binding.SendTimeout = timespan;
             var factory = new ChannelFactory<IWcfPingTest>(binding);
             var uri = DiscoverChannel();
             foreach (var item in uri.Endpoints)
