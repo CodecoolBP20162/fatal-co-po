@@ -1,0 +1,13 @@
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll.config
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.pdb
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.dll
+C:\Users\David\Documents\Visual Studio 2017\Projects\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.pdb
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll.config
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.dll
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\bin\Debug\GettingStartedLib.pdb
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.csprojResolveAssemblyReference.cache
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.dll
+C:\codes\fatal-co-po\GettingStarted\GettingStartedLib\obj\Debug\GettingStartedLib.pdb
