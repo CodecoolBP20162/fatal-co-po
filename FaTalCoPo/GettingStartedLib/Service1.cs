@@ -24,5 +24,11 @@ namespace GettingStartedLib
                 throw;
             }
         }
+
+        public string[] GetComputerInfo()
+        {
+            string[] data = new ComputerInfo().GatherComputerInfo();
+            return data;
+        }
     }
 }

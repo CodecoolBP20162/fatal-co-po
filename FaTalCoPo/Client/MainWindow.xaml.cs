@@ -18,6 +18,10 @@ namespace Client
             IWcfPingTest channel = client.channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
+            foreach(var item in channel.GetComputerInfo())
+            {
+                computerInfo.Items.Add(item);
+            }
         }
 
         private void screenshotButton_Click(object sender, RoutedEventArgs e)
