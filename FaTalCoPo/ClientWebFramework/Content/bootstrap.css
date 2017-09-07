@@ -4123,6 +4123,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     border-top: 0;
     box-shadow: none;
   }
+
   .navbar-collapse.collapse {
     display: block !important;
     height: auto !important;
@@ -6815,4 +6816,16 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.navbar-custom {
+    color: #0b1132;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    font-family: 'Segoe UI';
+    font-size: 18pt;
+    font-weight: 400;
 }
