@@ -18,7 +18,7 @@ namespace Client
             IWcfPingTest channel = client.channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
-            foreach(var item in channel.GetComputerInfo())
+            foreach(var item in client.SaveComputerInfo(0))
             {
                 computerInfo.Items.Add(item);
             }

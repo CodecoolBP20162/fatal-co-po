@@ -64,5 +64,20 @@ namespace Client
                 Console.WriteLine(ex);
             }
         }
+
+        public string[] SaveComputerInfo(int channelIndex)
+        {
+            string[] data = new string[8];
+            try
+            {
+                data = channels[channelIndex].GetComputerInfo();
+                Console.WriteLine("Getting computer information successful.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return data;
+        }
     }
 }
