@@ -13,6 +13,6 @@ namespace GettingStartedLib
         Stream GetScreenshot();
 
         [OperationContract]
-        string[] GetComputerInfo();
+        string GetComputerInfo();
     }
 }

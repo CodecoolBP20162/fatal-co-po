@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Management;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace GettingStartedLib
 {
@@ -13,18 +14,19 @@ namespace GettingStartedLib
         private PerformanceCounter totalCPUCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         private PerformanceCounter totalMemCounter = new PerformanceCounter("Memory", "Available MBytes");
 
-        public string[] GatherComputerInfo()
+        public string GatherComputerInfo()
         {
-            string[] data = new string[8];
-            data[0] = Environment.MachineName; // computerName
-            data[1] = UpTime().ToString(); // uptime
-            data[2] = Environment.OSVersion.ToString(); // osInfo
-            data[3] = GetProcessorName(); // cpuName
-            data[4] = string.Format(("{0:F1} %"), totalCPUCounter.NextValue()); // cpuUsage
-            data[5] = GetWindowsInstallationDateTime(data[0]).ToString(); // installDate
-            data[6] = InputLanguage.CurrentInputLanguage.Culture.TwoLetterISOLanguageName; // inputLocale
-            data[7] = CultureInfo.InstalledUICulture.EnglishName; // systemLocale
-            return data;
+            string computerName = computerName = Environment.MachineName;
+            var data = new Dictionary<string, string>();
+            data.Add("computerName", computerName);
+            data.Add("uptime", UpTime().ToString());
+            data.Add("osInfo", Environment.OSVersion.ToString());
+            data.Add("cpuName", GetProcessorName());
+            data.Add("cpuUsage", string.Format(("{0:F1} %"), totalCPUCounter.NextValue()));
+            data.Add("installDate", GetWindowsInstallationDateTime(computerName).ToString());
+            data.Add("inputLocale", InputLanguage.CurrentInputLanguage.Culture.TwoLetterISOLanguageName);
+            data.Add("systemLocale", CultureInfo.InstalledUICulture.EnglishName);
+            return JsonConvert.SerializeObject(data);
         }
 
         public TimeSpan UpTime()
@@ -63,7 +65,6 @@ namespace GettingStartedLib
 
                 return installDate;
             }
-
             return DateTime.MinValue;
         }
     }

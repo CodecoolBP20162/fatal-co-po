@@ -65,9 +65,9 @@ namespace Client
             }
         }
 
-        public string[] SaveComputerInfo(int channelIndex)
+        public string SaveComputerInfo(int channelIndex)
         {
-            string[] data = new string[8];
+            string data = null;
             try
             {
                 data = channels[channelIndex].GetComputerInfo();

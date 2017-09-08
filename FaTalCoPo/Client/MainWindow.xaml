@@ -48,19 +48,13 @@
         <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
             <StackPanel>
                 <ListView Name="lvIpNames"></ListView>
-                <ListView Name="computerInfo" Height="100">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
             </StackPanel>
         </Border>
         <Border Grid.Column="1" Grid.Row="1" >
             <StackPanel>
                 <ListView Name="lvLoadedFiles">
                 </ListView>
+                <Label Name="testLabel" Content="Label"/>
             </StackPanel>
         </Border>
         <Border Grid.Column="1" Grid.Row="2" >
