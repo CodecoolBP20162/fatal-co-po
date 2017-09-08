@@ -21,7 +21,7 @@ namespace GettingStartedLib
             data.Add("computerName", computerName);
             data.Add("uptime", UpTime().ToString());
             data.Add("osInfo", Environment.OSVersion.ToString());
-            data.Add("cpuName", GetProcessorName());
+            // data.Add("cpuName", GetProcessorName());
             data.Add("cpuUsage", string.Format(("{0:F1} %"), totalCPUCounter.NextValue()));
             data.Add("installDate", GetWindowsInstallationDateTime(computerName).ToString());
             data.Add("inputLocale", InputLanguage.CurrentInputLanguage.Culture.TwoLetterISOLanguageName);
@@ -40,13 +40,16 @@ namespace GettingStartedLib
 
         public string GetProcessorName()
         {
-            string procInfo = "";
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
-            foreach (ManagementObject share in searcher.Get())
+            ManagementClass mc = new ManagementClass("win32_processor");
+            ManagementObjectCollection moc = mc.GetInstances();
+            String Id = String.Empty;
+            foreach (ManagementObject mo in moc)
             {
-                procInfo = share["Name"].ToString();
+
+                Id = mo.Properties["processorID"].Value.ToString();
+                break;
             }
-            return procInfo;
+            return Id;
         }
 
         public DateTime GetWindowsInstallationDateTime(string computerName)

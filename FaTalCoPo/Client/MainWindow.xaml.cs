@@ -22,7 +22,7 @@ namespace Client
             tbSomething.Text = result;
             string content = client.SaveComputerInfo(0);
             Dictionary<string, string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
-            System.Console.WriteLine(dict["computerName"]);
+            testLabel.Content = dict["computerName"];
         }
 
         private void screenshotButton_Click(object sender, RoutedEventArgs e)
