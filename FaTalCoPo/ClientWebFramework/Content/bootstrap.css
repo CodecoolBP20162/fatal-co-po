@@ -4027,7 +4027,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   min-height: 70px;
   margin-bottom: 0px;
-  padding-top: 10px;
   border-bottom: 2px solid #ffffff;
 }
 
@@ -4196,8 +4195,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 30px;
-  line-height: 20px;
 }
 
 .navbar-brand:hover,
@@ -6819,6 +6816,7 @@ td.visible-print {
 }
 
 .navbar-custom {
+    padding-top: 0;
     color: #0b1132;
     font-family: 'Segoe UI';
     text-transform: uppercase;
@@ -6828,4 +6826,14 @@ td.visible-print {
     font-family: 'Segoe UI';
     font-size: 18pt;
     font-weight: 400;
+}
+
+.navbar-nav > li > a {
+    font-size: 18pt;
+    font-weight: 200;
+    padding-top: 22px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ddd;
 }
