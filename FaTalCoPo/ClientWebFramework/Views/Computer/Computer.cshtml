@@ -1,0 +1,20 @@
+﻿@model ClientWebFramework.ViewModels.ComputerViewModels
+@{
+    ViewBag.Title = "Computer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul>
+    @foreach (var computer in ViewBag.Computers)
+    {
+        <li>@computer.IPAddress</li>
+        <li>@computer.UPTime</li>
+        <li>@computer.ComputerName</li>
+        <li>@computer.OSName</li>
+        <li>@computer.OSVersion</li>
+        <li>@computer.TotalMemory</li>
+    }
+</ul>
+
+
+

@@ -7,8 +7,8 @@ namespace ClientWebFramework.Models
 {
     public class ComputerModels
     {
-        public int IPAddress { get; set; }
-        public int UPTime { get; set; }
+        public string IPAddress { get; set; }
+        public DateTime UPTime { get; set; }
         public string ComputerName { get; set; }
         public string OSName { get; set; }
         public string OSVersion { get; set; }
