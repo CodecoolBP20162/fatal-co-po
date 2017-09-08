@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using GettingStartedLib;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Client
 {
@@ -18,6 +20,9 @@ namespace Client
             IWcfPingTest channel = client.channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
+            string content = client.SaveComputerInfo(0);
+            Dictionary<string, string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+            testLabel.Content = dict["computerName"];
         }
 
         private void screenshotButton_Click(object sender, RoutedEventArgs e)

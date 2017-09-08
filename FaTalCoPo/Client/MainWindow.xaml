@@ -54,6 +54,7 @@
             <StackPanel>
                 <ListView Name="lvLoadedFiles">
                 </ListView>
+                <Label Name="testLabel" Content="Label"/>
             </StackPanel>
         </Border>
         <Border Grid.Column="1" Grid.Row="2" >
