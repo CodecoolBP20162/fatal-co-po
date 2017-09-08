@@ -13,13 +13,21 @@ namespace ClientWebFramework.Controllers
         // GET: Computer
         public ActionResult Index()
         {
-            var computer = new List<ComputerModels>
+            var computer = new Dictionary<string, ComputerModels>();
+            computer.Add("1", new ComputerModels
             {
-                new ComputerModels{IPAddress="111.111.111.111", UPTime=DateTime.Now, ComputerName="My PC",
-                OSName="Microsoft Windows", OSVersion="8.1", TotalMemory=500}
-            };
+                uptime = DateTime.Now,
+                computerName = "My PC",
+                osInfo = "Microsoft Windows"
+            });
 
-            
+            computer.Add("2", new ComputerModels
+            {
+                uptime = DateTime.Now,
+                computerName = "My PC SECOND",
+                osInfo = "Microsoft Windows 2"
+            });
+
             ViewBag.Computers = computer;
 
             return View("Computer");
