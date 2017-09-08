@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Client
 {
-    class ClientConnection
+    public class ClientConnection
     {
         private static ClientConnection instance;
         public List<IWcfPingTest> channels = new List<IWcfPingTest>();
