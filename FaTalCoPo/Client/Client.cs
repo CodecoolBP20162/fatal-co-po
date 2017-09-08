@@ -67,7 +67,7 @@ namespace Client
 
         public string SaveComputerInfo(int channelIndex)
         {
-            string data = null;
+            string data = "";
             try
             {
                 data = channels[channelIndex].GetComputerInfo();

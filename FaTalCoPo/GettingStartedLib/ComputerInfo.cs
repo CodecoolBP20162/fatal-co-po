@@ -41,13 +41,10 @@ namespace GettingStartedLib
         public string GetProcessorName()
         {
             string procInfo = "";
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher("select * from Win32_Processor");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
             foreach (ManagementObject share in searcher.Get())
             {
-                foreach (PropertyData PC in share.Properties)
-                {
-                    procInfo = PC.Name;
-                }
+                procInfo = share["Name"].ToString();
             }
             return procInfo;
         }
