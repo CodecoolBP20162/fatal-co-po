@@ -1,4 +1,4 @@
-﻿using GettingStartedLib;
+﻿using WcfLib;
 using System;
 using System.Linq;
 using System.Net;
@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Discovery;
 
-namespace GettingStartedHost
+namespace WcfHost
 {
 
     class Program

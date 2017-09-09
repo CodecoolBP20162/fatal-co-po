@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.ServiceModel;
 
-namespace GettingStartedLib
+namespace WcfLib
 {
     [ServiceContract]
     public interface IWcfPingTest

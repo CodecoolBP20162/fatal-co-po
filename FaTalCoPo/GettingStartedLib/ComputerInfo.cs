@@ -7,7 +7,7 @@ using System.Management;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
-namespace GettingStartedLib
+namespace WcfLib
 {
     class ComputerInfo
     {

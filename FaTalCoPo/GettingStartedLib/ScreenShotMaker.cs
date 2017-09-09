@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Forms;
 
-namespace GettingStartedLib
+namespace WcfLib
 {
     public class ScreenShotMaker
     {

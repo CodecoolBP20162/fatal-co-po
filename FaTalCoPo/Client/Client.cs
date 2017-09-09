@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ServiceModel.Discovery;
-using GettingStartedLib;
+using WcfLib;
 using System.ServiceModel;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Client
+namespace WcfClient
 {
     public class ClientConnection
     {

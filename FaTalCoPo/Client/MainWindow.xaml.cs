@@ -1,9 +1,9 @@
 ﻿using System.Windows;
-using GettingStartedLib;
+using WcfLib;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Client
+namespace WcfClient
 {
     public partial class MainWindow : Window
     {

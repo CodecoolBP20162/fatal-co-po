@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace GettingStartedLib
+namespace WcfLib
 {
     public class WcfPingTest : IWcfPingTest
     {
