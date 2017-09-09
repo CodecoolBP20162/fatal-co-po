@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Client</RootNamespace>
-    <AssemblyName>Client</AssemblyName>
+    <RootNamespace>WcfClient</RootNamespace>
+    <AssemblyName>WcfClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -109,17 +109,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GettingStartedHost\WcfHost.csproj">
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WcfHost\WcfHost.csproj">
       <Project>{f6cbae14-81ab-4ccb-8b77-2e0a3c8dc1ca}</Project>
       <Name>WcfHost</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GettingStartedLib\WcfLib.csproj">
-      <Project>{2B863DA4-A9F1-4CA0-B36D-80E947074C71}</Project>
+    <ProjectReference Include="..\WcfLib\WcfLib.csproj">
+      <Project>{2b863da4-a9f1-4ca0-b36d-80e947074c71}</Project>
       <Name>WcfLib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

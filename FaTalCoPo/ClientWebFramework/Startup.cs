@@ -1,5 +1,6 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using WcfClient;
 
 [assembly: OwinStartupAttribute(typeof(ClientWebFramework.Startup))]
 namespace ClientWebFramework
@@ -9,6 +10,8 @@ namespace ClientWebFramework
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            ClientConnection client = ClientConnection.GetInstance();
+            client.SetupChannels();
         }
     }
 }

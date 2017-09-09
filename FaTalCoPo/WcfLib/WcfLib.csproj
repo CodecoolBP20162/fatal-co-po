@@ -7,8 +7,8 @@
     <ProjectGuid>{2B863DA4-A9F1-4CA0-B36D-80E947074C71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GettingStartedLib</RootNamespace>
-    <AssemblyName>GettingStartedLib</AssemblyName>
+    <RootNamespace>WcfLib</RootNamespace>
+    <AssemblyName>WcfLib</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>"/client:iexplore.exe" "/clientArgs:http://localhost:8733/Design_Time_Addresses/GettingStartedLib/Feed1/"</StartArguments>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>

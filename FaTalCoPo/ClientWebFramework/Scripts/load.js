@@ -16,7 +16,7 @@
 }
 
 function getErrorMessage(jqXHR, exception) {
-    var content = "\nA mentés sikertelen. Próbáld újra.";
+    var content = "\nSomething went wrong. Please try again.";
     var msg = '';
     if (jqXHR.status === 0) {
         msg = 'Cannot connect.\n Verify Network.' + content;
