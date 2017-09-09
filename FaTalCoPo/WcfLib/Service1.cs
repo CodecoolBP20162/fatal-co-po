@@ -3,7 +3,7 @@ using System.IO;
 
 namespace WcfLib
 {
-    public class WcfPingTest : IWcfPingTest
+    public class WcfPing : IWcfPing
     {
         public const string magicString = "Someshit"; // this is random, just to see if you get the right result
 

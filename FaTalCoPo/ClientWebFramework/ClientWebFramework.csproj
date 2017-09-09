@@ -281,16 +281,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Client\WcfClient.csproj">
-      <Project>{fabb1b11-76e8-42b7-8ae2-1dc6486c5c06}</Project>
-      <Name>WcfClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GettingStartedLib\WcfLib.csproj">
-      <Project>{2b863da4-a9f1-4ca0-b36d-80e947074c71}</Project>
-      <Name>WcfLib</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -17,7 +17,7 @@ namespace WcfClient
         {
             ClientConnection client = ClientConnection.GetInstance();
             client.SetupChannels();
-            IWcfPingTest channel = client.channels[0];
+            IWcfPing channel = client.channels[0];
             string result = channel.Ping();
             tbSomething.Text = result;
             string content = client.SaveComputerInfo(0);

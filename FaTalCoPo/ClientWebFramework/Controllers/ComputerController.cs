@@ -6,8 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using ClientWebFramework.ViewModels;
 using Newtonsoft.Json;
-using WcfClient;
-using WcfLib;
 
 namespace ClientWebFramework.Controllers
 {

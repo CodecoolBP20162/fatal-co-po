@@ -1,10 +1,10 @@
-﻿using WcfLib;
-using System;
+﻿using System;
 using System.Linq;
 using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Discovery;
+using WcfLib;
 
 namespace WcfHost
 {
@@ -21,7 +21,7 @@ namespace WcfHost
         {
             string hostname = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).ToString();
             var baseAddress = new UriBuilder("http", hostname, 2000, "WcfPing");
-            var h = new ServiceHost(typeof(WcfPingTest), baseAddress.Uri);
+            var h = new ServiceHost(typeof(WcfPing), baseAddress.Uri);
 
             // enable processing of discovery messages.  use UdpDiscoveryEndpoint to enable listening. use EndpointDiscoveryBehavior for fine control.
             h.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
@@ -37,7 +37,7 @@ namespace WcfHost
             var binding = new BasicHttpBinding(BasicHttpSecurityMode.None);
             binding.MaxReceivedMessageSize = 4294967295;
             binding.TransferMode = TransferMode.Streamed;
-            h.AddServiceEndpoint(typeof(IWcfPingTest), binding, "");
+            h.AddServiceEndpoint(typeof(IWcfPing), binding, "");
             h.Open();
             Console.WriteLine("host open at " + baseAddress);
         }

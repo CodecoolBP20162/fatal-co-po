@@ -4,7 +4,7 @@ using System.ServiceModel;
 namespace WcfLib
 {
     [ServiceContract]
-    public interface IWcfPingTest
+    public interface IWcfPing
     {
         [OperationContract]
         string Ping();

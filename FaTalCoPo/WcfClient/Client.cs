@@ -1,16 +1,16 @@
 ﻿using System;
 using System.ServiceModel.Discovery;
-using WcfLib;
 using System.ServiceModel;
 using System.Collections.Generic;
 using System.IO;
+using WcfLib;
 
 namespace WcfClient
 {
     public class ClientConnection
     {
         private static ClientConnection instance;
-        public List<IWcfPingTest> channels = new List<IWcfPingTest>();
+        public List<IWcfPing> channels = new List<IWcfPing>();
 
         private ClientConnection() { }
 
@@ -28,12 +28,12 @@ namespace WcfClient
             var binding = new BasicHttpBinding(BasicHttpSecurityMode.None);
             binding.MaxReceivedMessageSize = 4294967295;
             binding.TransferMode = TransferMode.Streamed;
-            var factory = new ChannelFactory<IWcfPingTest>(binding);
+            var factory = new ChannelFactory<IWcfPing>(binding);
             var uri = DiscoverChannel();
             foreach (var item in uri.Endpoints)
             {
                 EndpointAddress newEndpoint = new EndpointAddress(item.Address.Uri);
-                IWcfPingTest newChannel = factory.CreateChannel(newEndpoint);
+                IWcfPing newChannel = factory.CreateChannel(newEndpoint);
                 channels.Add(newChannel);
             }
         }
@@ -41,7 +41,7 @@ namespace WcfClient
         public FindResponse DiscoverChannel()
         {
             var dc = new DiscoveryClient(new UdpDiscoveryEndpoint());
-            FindCriteria fc = new FindCriteria(typeof(IWcfPingTest));
+            FindCriteria fc = new FindCriteria(typeof(IWcfPing));
             fc.Duration = TimeSpan.FromSeconds(5);
             FindResponse fr = dc.Find(fc);
             return fr;
