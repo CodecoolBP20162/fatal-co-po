@@ -19,21 +19,21 @@ namespace ClientWebFramework.Controllers
             return View("Computer");
         }
 
-        public PartialViewResult LoadComputers()
-        {
-            ClientConnection client = ClientConnection.GetInstance();
-            client.SetupChannels();
-            List<Dictionary<string, string>> computers = new List<Dictionary<string, string>>();
-            for (int i = 0; i < client.channels.Count; i++)
-            {
-                IWcfPingTest channel = client.channels[i];
-                string content = client.SaveComputerInfo(i);
-                Dictionary<string, string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
-                computers.Add(dict);
-            }
+        //public PartialViewResult LoadComputers()
+        //{
+        //    ClientConnection client = ClientConnection.GetInstance();
+        //    client.SetupChannels();
+        //    List<Dictionary<string, string>> computers = new List<Dictionary<string, string>>();
+        //    for (int i = 0; i < client.channels.Count; i++)
+        //    {
+        //        IWcfPingTest channel = client.channels[i];
+        //        string content = client.SaveComputerInfo(i);
+        //        Dictionary<string, string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+        //        computers.Add(dict);
+        //    }
 
-            ViewBag.Computers = computers;
-            return PartialView("LoadComputers");
-        }
+        //    ViewBag.Computers = computers;
+        //    return PartialView("LoadComputers");
+        //}
     }
 }
