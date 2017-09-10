@@ -1,0 +1,17 @@
+﻿ASDSDFSGGSDGSDFDGSFDS
+
+@{
+    <ul>
+        @foreach (var computer in ViewBag.Computers)
+        {
+            <li>@computer["computerName"]</li>
+            <li>@computer["uptime"]</li>
+            <li>@computer["osInfo"]</li>
+            <li>@computer["cpuUsage"]</li>
+            <li>@computer["installDate"]</li>
+            <li>@computer["inputLocale"]</li>
+            <li>@computer["systemLocale"]</li>
+        }
+    </ul>
+}
+
