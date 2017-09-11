@@ -219,8 +219,7 @@
     <Content Include="Content\img\left-on.png" />
     <Content Include="Content\img\right-off.png" />
     <Content Include="Content\img\right-on.png" />
-    <Content Include="Content\slick-theme.css" />
-    <Content Include="Content\slick.css" />
+    <Content Include="Content\slider.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -244,8 +243,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\slick.js" />
-    <Content Include="Scripts\slick.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

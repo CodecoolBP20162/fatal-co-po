@@ -22,14 +22,12 @@ namespace ClientWebFramework
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
-                      "~/Scripts/slick.js",
-                      "~/Scripts/slick.min.js"));
+                      "~/Scripts/slider.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/slick.css",
-                      "~/Content/slick-theme.css"));
+                      "~/Content/slider.css"));
         }
     }
 }
