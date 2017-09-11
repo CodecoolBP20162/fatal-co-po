@@ -11,6 +11,11 @@ namespace WcfHost
 
     class Program
     {
+
+        string LogName = "kk.log";
+        //log4net.GlobalContext.Properties["LogName"] = LogName;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public static void Main(string[] args)
         {
            WcfTestHost_Open();
@@ -19,6 +24,7 @@ namespace WcfHost
 
         public static void WcfTestHost_Open()
         {
+            log.Debug("started");
             string hostname = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).ToString();
             var baseAddress = new UriBuilder("http", hostname, 2000, "WcfPing");
             var h = new ServiceHost(typeof(WcfPing), baseAddress.Uri);

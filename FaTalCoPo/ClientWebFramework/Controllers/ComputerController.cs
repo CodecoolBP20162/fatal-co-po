@@ -13,6 +13,7 @@ namespace ClientWebFramework.Controllers
 {
     public class ComputerController : Controller
     {
+
         // GET: Computer
         public ActionResult Index()
         {

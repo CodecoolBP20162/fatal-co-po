@@ -1,0 +1,5 @@
+DEBUG 2017-09-11 15:00:28,449 24895ms ComputerController     LoadComputers      - System.Collections.Generic.List`1[System.Collections.Generic.Dictionary`2[System.String,System.String]] were added to ViewBag.COmputers.
+DEBUG 2017-09-11 15:01:16,266 72712ms ComputerController     LoadComputers      - System.Collections.Generic.List`1[System.Collections.Generic.Dictionary`2[System.String,System.String]] were added to ViewBag.COmputers.
+DEBUG 2017-09-11 15:01:19,934 76380ms ComputerController     LoadComputers      - System.Collections.Generic.List`1[System.Collections.Generic.Dictionary`2[System.String,System.String]] were added to ViewBag.COmputers.
+DEBUG 2017-09-11 15:02:20,394 15378ms ComputerController     LoadComputers      - System.Collections.Generic.List`1[System.Collections.Generic.Dictionary`2[System.String,System.String]] were added to ViewBag.COmputers.
+DEBUG 2017-09-11 15:02:29,821 24806ms ComputerController     LoadComputers      - System.Collections.Generic.List`1[System.Collections.Generic.Dictionary`2[System.String,System.String]] were added to ViewBag.COmputers.

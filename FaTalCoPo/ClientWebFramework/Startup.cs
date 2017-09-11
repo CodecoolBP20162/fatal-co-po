@@ -3,6 +3,8 @@ using Owin;
 using WcfClient;
 
 [assembly: OwinStartupAttribute(typeof(ClientWebFramework.Startup))]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "Web.config", Watch = true)]
+
 namespace ClientWebFramework
 {
     public partial class Startup
