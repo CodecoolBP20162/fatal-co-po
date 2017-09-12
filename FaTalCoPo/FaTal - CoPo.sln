@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWebFramework", "ClientWebFramework\ClientWebFramework.csproj", "{D50CAF22-2398-4ADC-9D8E-2B9B7E868D05}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -13,6 +13,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLib", "WcfLib\WcfLib.csproj", "{2B863DA4-A9F1-4CA0-B36D-80E947074C71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfClient", "WcfClient\WcfClient.csproj", "{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Tests", "Web.Tests\Web.Tests.csproj", "{9E020BC8-F1A1-47E9-832F-0C37F6DC5DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FABB1B11-76E8-42B7-8AE2-1DC6486C5C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E020BC8-F1A1-47E9-832F-0C37F6DC5DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E020BC8-F1A1-47E9-832F-0C37F6DC5DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E020BC8-F1A1-47E9-832F-0C37F6DC5DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E020BC8-F1A1-47E9-832F-0C37F6DC5DBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
