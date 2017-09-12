@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Management;
 using System.Windows.Forms;
+using System.Diagnostics;
 using Newtonsoft.Json;
 
 namespace WcfLib
@@ -65,6 +66,11 @@ namespace WcfLib
                 return installDate;
             }
             return DateTime.MinValue;
+        }
+
+        public Process[] GetProcesses()
+        {
+            return Process.GetProcesses();
         }
     }
 }

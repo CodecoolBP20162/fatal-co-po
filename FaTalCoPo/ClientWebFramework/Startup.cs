@@ -20,8 +20,6 @@ namespace ClientWebFramework
             ConfigureAuth(app);
             var options = new DashboardOptions { Authorization = new[] { new CustomAuthorizationFilter() } };
             app.UseHangfireDashboard("/hangfire", options);
-
-            RecurringJob.AddOrUpdate(() => client.SetupChannels(), Cron.Minutely);
         }
     }
 

@@ -10,6 +10,7 @@
 @section Scripts {
     <script>
         LoadComputers();
-        window.setInterval(function () { LoadComputers(); }, 10000);
+        window.setInterval(function () { RefreshComputerData(); }, 5000);
+        window.setInterval(function () { LoadComputers(); }, 5000);
     </script>
 }

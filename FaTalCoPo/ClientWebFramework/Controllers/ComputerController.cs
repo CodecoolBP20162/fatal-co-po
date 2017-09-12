@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using Newtonsoft.Json;
 using WcfClient;
 using WcfLib;
+using Hangfire;
 
 namespace ClientWebFramework.Controllers
 {
@@ -33,6 +34,12 @@ namespace ClientWebFramework.Controllers
             }
             catch { }
             return PartialView("LoadComputers");
+        }
+
+        public void RefreshComputerData()
+        {
+            ClientConnection client = ClientConnection.GetInstance();
+            BackgroundJob.Enqueue(() => client.SetupChannels());
         }
     }
 }
