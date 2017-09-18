@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace ClientWebFramework.Tests
 {
     [TestFixture]
-    public class Class1
+    public class WebTests
     {
         [Test]
         public void asd()
