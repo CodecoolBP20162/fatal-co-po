@@ -11,7 +11,7 @@ namespace Web.Tests
         [Test]
         public void LoadComputersIsEmpty()
         {
-            ComputerController computer = new ComputerController();
+            //ComputerController computer = new ComputerController();
             string result = null;
             Assert.AreEqual(result, Is.Empty);
         }
