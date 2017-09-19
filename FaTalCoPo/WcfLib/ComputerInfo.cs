@@ -21,7 +21,7 @@ namespace WcfLib
             data.Add("uptime", UpTime().ToString());
             data.Add("osInfo", Environment.OSVersion.ToString());
             // data.Add("cpuName", GetProcessorName());
-            data.Add("cpuUsage", string.Format(("{0:F1} %"), totalCPUCounter.NextValue()));
+            data.Add("cpuUsage", string.Format(("{0:F1} %"), getCPUCounter()));
             data.Add("installDate", GetWindowsInstallationDateTime(computerName).ToString());
             data.Add("inputLocale", InputLanguage.CurrentInputLanguage.Culture.TwoLetterISOLanguageName);
             data.Add("systemLocale", CultureInfo.InstalledUICulture.EnglishName);
@@ -65,6 +65,16 @@ namespace WcfLib
                 return installDate;
             }
             return DateTime.MinValue;
+        }
+
+        public object getCPUCounter()
+        {
+            dynamic firstValue = totalCPUCounter.NextValue();
+            System.Threading.Thread.Sleep(1000);
+
+            dynamic secondValue = totalCPUCounter.NextValue();
+
+            return secondValue;
         }
     }
 }
