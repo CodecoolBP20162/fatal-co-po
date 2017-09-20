@@ -79,9 +79,7 @@ namespace WcfLib
 
         public Process[] getProcesses()
         {
-            var data = new Dictionary<string, Process>();
             return Process.GetProcesses();
-            
         }
     }
 }

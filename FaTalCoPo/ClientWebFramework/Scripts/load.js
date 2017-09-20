@@ -28,13 +28,13 @@ function LoadProcesses() {
             dataType: 'html'
         })
             .success(function (result) {
-                $('#computers').empty();
-                $('#computers').html(result);
+                $('#processes').empty();
+                $('#processes').html(result);
             })
             .error(function (jqXHR, exception) {
                 //getErrorMessage(jqXHR, exception);
-                $('#computers').empty();
-                $('#computers').html("No computers found.");
+                $('#processes').empty();
+                $('#processes').html("No computers found.");
             });
     });
 }
