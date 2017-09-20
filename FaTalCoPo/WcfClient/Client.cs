@@ -4,6 +4,7 @@ using System.ServiceModel;
 using System.Collections.Generic;
 using System.IO;
 using WcfLib;
+using System.Diagnostics;
 
 namespace WcfClient
 {
@@ -72,6 +73,21 @@ namespace WcfClient
             {
                 data = channels[channelIndex].GetComputerInfo();
                 Console.WriteLine("Getting computer information successful.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return data;
+        }
+
+        public Process[] SaveProccesses(int channelIndex)
+        {
+            Process[] data = null;
+            try
+            {
+                data = channels[channelIndex].GetProcessesInfo();
+                Console.WriteLine("Getting computer proccesses successful.");
             }
             catch (Exception ex)
             {

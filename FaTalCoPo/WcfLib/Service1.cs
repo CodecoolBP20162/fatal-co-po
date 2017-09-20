@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace WcfLib
@@ -28,6 +29,12 @@ namespace WcfLib
         public string GetComputerInfo()
         {
             string data = new ComputerInfo().GatherComputerInfo();
+            return data;
+        }
+
+        public Process[] GetProcessesInfo()
+        {
+            Process[] data = new ComputerInfo().getProcesses();
             return data;
         }
     }

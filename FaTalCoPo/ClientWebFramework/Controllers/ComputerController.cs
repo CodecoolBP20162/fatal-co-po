@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using Newtonsoft.Json;
 using WcfClient;
 using WcfLib;
+using System.Diagnostics;
 
 namespace ClientWebFramework.Controllers
 {
@@ -33,6 +34,25 @@ namespace ClientWebFramework.Controllers
             }
             catch { }
             return PartialView("LoadComputers");
+        }
+
+        public PartialViewResult LoadProcesses()
+        {
+            try
+            {
+                ClientConnection client = ClientConnection.GetInstance();
+                List<Process[]> processes = new List<Process[]>();
+                for (int i = 0; i < client.channels.Count; i++)
+                {
+                    IWcfPing channel = client.channels[i];
+                    Process[] content = client.SaveProccesses(i);
+                   // Dictionary<string, Process[]> dict = JsonConvert.DeserializeObject<Dictionary<string, Process[]>>(content);
+                    processes.Add(content);
+                }
+                ViewBag.Processes = processes;
+            }
+            catch { }
+            return PartialView("LoadProcesses");
         }
     }
 }
