@@ -82,6 +82,7 @@ namespace WcfLib
         public Process[] getProcesses()
         {
             return Process.GetProcesses();
+            
         }
     }
 }

@@ -81,7 +81,7 @@ namespace WcfClient
             return data;
         }
 
-        public Process[] SaveProccesses(int channelIndex)
+        public string SaveProccesses(int channelIndex)
         {
             Process[] data = null;
             try
@@ -93,7 +93,10 @@ namespace WcfClient
             {
                 Console.WriteLine(ex);
             }
-            return data;
+            //Process[] kamu = new Process[] { };
+            //kamu[0] = new Process();
+            return "kamu";
+            //return data;
         }
     }
 }

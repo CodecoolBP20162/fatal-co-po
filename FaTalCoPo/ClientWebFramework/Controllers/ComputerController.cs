@@ -33,25 +33,26 @@ namespace ClientWebFramework.Controllers
                 ViewBag.Computers = computers;
             }
             catch { }
-            return PartialView("LoadComputers");
-        }
+            //return PartialView("LoadComputers");
+        //}
 
-        public PartialViewResult LoadProcesses()
-        {
+        //public PartialViewResult LoadProcesses()
+        //{
             try
             {
                 ClientConnection client = ClientConnection.GetInstance();
-                List<Process[]> processes = new List<Process[]>();
+                //List<Process[]> processes = new List<Process[]>();
+                List<string> processes = new List<string>();
                 for (int i = 0; i < client.channels.Count; i++)
                 {
                     IWcfPing channel = client.channels[i];
-                    Process[] content = client.SaveProccesses(i);
+                    string content = client.SaveProccesses(i);
                     processes.Add(content);
                 }
                 ViewBag.Processes = processes;
             }
             catch { }
-            return PartialView("LoadProcesses");
+            return PartialView("Loadcomputers");
         }
     }
 }

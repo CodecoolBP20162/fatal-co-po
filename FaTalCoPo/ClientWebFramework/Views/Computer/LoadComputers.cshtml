@@ -10,3 +10,10 @@
             <li>@computer["systemLocale"]</li>
     }
 </ul>
+
+<ul>
+    @foreach (var process in ViewBag.Processes)
+    {
+        <li>@process</li>
+    }
+</ul>

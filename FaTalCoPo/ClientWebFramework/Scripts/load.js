@@ -18,11 +18,11 @@
     });
 }
 
-
+//useless shit happens here
 function LoadProcesses() {
     $(document).ready(function () {
         $.ajax({
-            url: '/Computer/LoadProcesses',
+            url: '/Computer/LoadComputers',
             contentType: 'application/html; charset=utf-8',
             type: 'GET',
             dataType: 'html'
