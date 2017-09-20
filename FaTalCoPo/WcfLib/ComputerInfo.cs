@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Management;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Microsoft.Win32;
 
 namespace WcfLib
 {
@@ -53,18 +54,19 @@ namespace WcfLib
 
         public DateTime GetWindowsInstallationDateTime(string computerName)
         {
-            Microsoft.Win32.RegistryKey key = Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive.LocalMachine, computerName);
+            DateTime installDate = new DateTime();
+            var key = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
             key = key.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion", false);
             if (key != null)
             {
                 DateTime startDate = new DateTime(1970, 1, 1, 0, 0, 0);
-                Int64 regVal = Convert.ToInt64(key.GetValue("InstallDate").ToString());
+                object objValue = key.GetValue("InstallDate");
+                string stringValue = objValue.ToString();
+                Int64 regVal = Convert.ToInt64(stringValue);
 
-                DateTime installDate = startDate.AddSeconds(regVal);
-
-                return installDate;
+                installDate = startDate.AddSeconds(regVal);
             }
-            return DateTime.MinValue;
+            return installDate;
         }
 
         public object getCPUCounter()
