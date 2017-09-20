@@ -20,7 +20,7 @@ namespace WcfLib
             data.Add("computerName", computerName);
             data.Add("uptime", UpTime().ToString());
             data.Add("osInfo", Environment.OSVersion.ToString());
-            // data.Add("cpuName", GetProcessorName());
+            data.Add("cpuName", GetProcessorName());
             data.Add("cpuUsage", string.Format(("{0:F1} %"), getCPUCounter()));
             data.Add("installDate", GetWindowsInstallationDateTime(computerName).ToString());
             data.Add("inputLocale", InputLanguage.CurrentInputLanguage.Culture.TwoLetterISOLanguageName);
