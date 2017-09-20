@@ -76,5 +76,15 @@ namespace WcfLib
 
             return secondValue;
         }
+
+        public object getProcesses()
+        {
+            Process[] processes = Process.GetProcesses();
+            return processes;
+            //foreach (Process process in processes)
+            //{
+            //    Console.WriteLine(process.ProcessName);
+            //}
+        }
     }
 }
