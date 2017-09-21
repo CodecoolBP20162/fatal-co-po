@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.ServiceModel;
 
 namespace WcfLib
@@ -14,5 +15,8 @@ namespace WcfLib
 
         [OperationContract]
         string GetComputerInfo();
+
+        [OperationContract]
+        string GetProcessesInfo();
     }
 }

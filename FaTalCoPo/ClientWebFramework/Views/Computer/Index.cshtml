@@ -7,9 +7,17 @@
 
 <div id="computers"></div>
 
+<div style="margin-top:80px">PROCESSES</div>
+
+<div id="proccesses"></div>
+
 @section Scripts {
     <script>
         LoadComputers();
         window.setInterval(function () { LoadComputers(); }, 10000);
+    </script>
+    <script>
+        LoadProcesses();
+        window.setInterval(function () { LoadProcesses(); }, 10000);
     </script>
 }
