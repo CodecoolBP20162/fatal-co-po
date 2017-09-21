@@ -1,0 +1,25 @@
+﻿COMPUTER DATA
+<ul>
+    @foreach (var computer in ViewBag.Computers)
+    {
+        <li>@computer["computerName"]</li>
+            <li>@computer["uptime"]</li>
+            <li>@computer["osInfo"]</li>
+            <li>@computer["cpuUsage"]</li>
+            <li>@computer["installDate"]</li>
+            <li>@computer["inputLocale"]</li>
+            <li>@computer["systemLocale"]</li>
+    }
+</ul>
+
+PROCESSES
+<ul>
+    @foreach (var process in ViewBag.Processes)
+    {
+       foreach (var pr in process)
+       {
+        <li>@pr</li>
+
+       }
+    }
+</ul>

@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Computers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div  style="margin-top:50px">FATÁL CO-PO</div>
+<div  id="computers"></div>
+
+
+@section Scripts {
+    <script>
+        LoadComputers();
+        window.setInterval(function () { LoadComputers(); }, 10000);
+    </script>
+    
+}
