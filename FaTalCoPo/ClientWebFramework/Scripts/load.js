@@ -18,27 +18,6 @@
     });
 }
 
-//useless shit happens here
-function LoadProcesses() {
-    $(document).ready(function () {
-        $.ajax({
-            url: '/Computer/LoadComputers',
-            contentType: 'application/html; charset=utf-8',
-            type: 'GET',
-            dataType: 'html'
-        })
-            .success(function (result) {
-                $('#processes').empty();
-                $('#processes').html(result);
-            })
-            .error(function (jqXHR, exception) {
-                //getErrorMessage(jqXHR, exception);
-                $('#processes').empty();
-                $('#processes').html("No computers found.");
-            });
-    });
-}
-
 function getErrorMessage(jqXHR, exception) {
     var content = "\nSomething went wrong. Please try again.";
     var msg = '';
