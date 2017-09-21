@@ -32,9 +32,9 @@ namespace WcfLib
             return data;
         }
 
-        public Process[] GetProcessesInfo()
+        public string GetProcessesInfo()
         {
-            Process[] data = new ComputerInfo().getProcesses();
+            string data = new ComputerInfo().getProcessName();
             return data;
         }
     }

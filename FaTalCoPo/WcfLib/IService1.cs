@@ -17,6 +17,6 @@ namespace WcfLib
         string GetComputerInfo();
 
         [OperationContract]
-        Process[] GetProcessesInfo();
+        string GetProcessesInfo();
     }
 }

@@ -47,6 +47,7 @@ namespace ClientWebFramework.Controllers
                 {
                     IWcfPing channel = client.channels[i];
                     string content = client.SaveProccesses(i);
+                    List<string> names = JsonConvert.DeserializeObject<List<string>>(content);
                     processes.Add(content);
                 }
                 ViewBag.Processes = processes;

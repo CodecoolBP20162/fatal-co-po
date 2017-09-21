@@ -79,10 +79,15 @@ namespace WcfLib
             return secondValue;
         }
 
-        public Process[] getProcesses()
+        public string getProcessName()
         {
-            return Process.GetProcesses();
-            
+            Process[] processes=Process.GetProcesses();
+            List<string> processName = new List<string>();
+            foreach(Process process in processes)
+            {
+                processName.Add(process.ProcessName);
+            }
+            return JsonConvert.SerializeObject(processName);
         }
     }
 }
