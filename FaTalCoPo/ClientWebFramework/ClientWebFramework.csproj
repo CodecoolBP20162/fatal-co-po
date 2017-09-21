@@ -210,8 +210,24 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ajax-loader.gif" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\example-1.jpg" />
+    <Content Include="Content\img\example-2.jpg" />
+    <Content Include="Content\img\example-3.jpg" />
+    <Content Include="Content\img\example-4.jpg" />
+    <Content Include="Content\img\example-5.jpg" />
+    <Content Include="Content\img\example-6.jpg" />
+    <Content Include="Content\img\example-7.jpg" />
+    <Content Include="Content\img\example-8.jpg" />
+    <Content Include="Content\img\example-9.jpg" />
+    <Content Include="Content\fonts\slick.svg" />
+    <Content Include="Content\img\left-off.png" />
+    <Content Include="Content\img\left-on.png" />
+    <Content Include="Content\img\right-off.png" />
+    <Content Include="Content\img\right-on.png" />
+    <Content Include="Content\slider.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -222,6 +238,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\fonts\slick.eot" />
+    <Content Include="Content\fonts\slick.ttf" />
+    <Content Include="Content\fonts\slick.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\load.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -234,6 +253,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\slider.js" />
+    <Content Include="Web.config" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
