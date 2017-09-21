@@ -23,32 +23,19 @@ namespace ClientWebFramework.Controllers
             {
                 ClientConnection client = ClientConnection.GetInstance();
                 List<Dictionary<string, string>> computers = new List<Dictionary<string, string>>();
+                List<List<string>> processes = new List<List<string>>();
                 for (int i = 0; i < client.channels.Count; i++)
                 {
                     IWcfPing channel = client.channels[i];
                     string content = client.SaveComputerInfo(i);
                     Dictionary<string, string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
                     computers.Add(dict);
+                    string processContent = client.SaveProccesses(i);
+                    List<string> names = JsonConvert.DeserializeObject<List<string>>(processContent);
+                    processes.Add(names);
+                    client.SaveScreenShot(i);
                 }
                 ViewBag.Computers = computers;
-            }
-            catch { }
-            //return PartialView("LoadComputers");
-        //}
-
-        //public PartialViewResult LoadProcesses()
-        //{
-            try
-            {
-                ClientConnection client = ClientConnection.GetInstance();
-                List<List<string>> processes = new List<List<string>>();
-                for (int i = 0; i < client.channels.Count; i++)
-                {
-                    IWcfPing channel = client.channels[i];
-                    string content = client.SaveProccesses(i);
-                    List<string> names = JsonConvert.DeserializeObject<List<string>>(content);
-                    processes.Add(names);
-                }
                 ViewBag.Processes = processes;
             }
             catch { }
