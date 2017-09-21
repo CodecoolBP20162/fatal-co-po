@@ -23,7 +23,8 @@ namespace ClientWebFramework
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/slider.js"));
-
+                      "~/Scripts/load.js"));
+          
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
