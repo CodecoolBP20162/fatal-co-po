@@ -41,14 +41,13 @@ namespace ClientWebFramework.Controllers
             try
             {
                 ClientConnection client = ClientConnection.GetInstance();
-                //List<Process[]> processes = new List<Process[]>();
-                List<string> processes = new List<string>();
+                List<List<string>> processes = new List<List<string>>();
                 for (int i = 0; i < client.channels.Count; i++)
                 {
                     IWcfPing channel = client.channels[i];
                     string content = client.SaveProccesses(i);
                     List<string> names = JsonConvert.DeserializeObject<List<string>>(content);
-                    processes.Add(content);
+                    processes.Add(names);
                 }
                 ViewBag.Processes = processes;
             }

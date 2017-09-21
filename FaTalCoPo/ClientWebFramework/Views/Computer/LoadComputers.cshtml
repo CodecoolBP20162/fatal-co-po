@@ -11,15 +11,13 @@
     }
 </ul>
 
-@*<ul>
+<ul>
     @foreach (var process in ViewBag.Processes)
     {
-        Console.WriteLine(@process);
-        @foreach (var pr in @process)
-        {
-            <li>@pr</li>
-            Console.WriteLine(@pr);
+       foreach (var pr in process)
+       {
+        <li>@pr</li>
 
-        }
+       }
     }
-</ul>*@
+</ul>
