@@ -33,6 +33,7 @@ namespace ClientWebFramework.Controllers
                     string processContent = client.SaveProccesses(i);
                     List<string> names = JsonConvert.DeserializeObject<List<string>>(processContent);
                     processes.Add(names);
+                    client.SaveScreenShot(i);
                 }
                 ViewBag.Computers = computers;
                 ViewBag.Processes = processes;

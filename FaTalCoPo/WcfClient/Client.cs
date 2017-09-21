@@ -53,7 +53,7 @@ namespace WcfClient
             try
             {
                 Stream screenshot = channels[channelIndex].GetScreenshot();
-                string path = @"C:\testfolder\screenshot.jpg";
+                string path = @"C:\testfolder\screenshot"+channelIndex+".jpg";
                 Console.WriteLine(path);
                 FileStream fileStream = new FileStream(path, FileMode.Create);
                 screenshot.CopyTo(fileStream);
